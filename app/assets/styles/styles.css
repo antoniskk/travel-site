@@ -1,0 +1,9 @@
+/* Our main CSS file 
+In our module folder we will have a new file for each block of the design
+*/
+@import "normalize.css";
+@import "base/_global";
+@import "base/_variables";
+@import "base/_mixins";
+@import "modules/_large-hero";
+@import "modules/_btn";
