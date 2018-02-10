@@ -7,6 +7,8 @@ gulp.task('watch', function()
 {
 
 	browserSync.init({
+		//hide toast messsage from browserSync
+		//notify :false,
 		server: {
 			baseDir: "app" 
 		}
@@ -26,6 +28,8 @@ gulp.task('watch', function()
 });
 
 
+//browserSync actually doens't need to refresh the browser in case we change our css files
+//creating a new task below	to inject our changes on the fly
 gulp.task('cssInject', ['styles'], function(){ //styles task is a dependency of the cssInject task
 	// before you run the cssInject task you must begin and complete any task inside the []
 	return gulp.src('./app/temp/styles/styles.css') //gulp.src points to our root css file

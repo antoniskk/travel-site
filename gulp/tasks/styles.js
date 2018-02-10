@@ -11,9 +11,10 @@ gulp.task('styles', function()
 {
 	return gulp.src('./app/assets/styles/styles.css')
 		.pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
-		.on('error', function(errorInfo){
+		.on('error', function(errorInfo){ // the name of the event we are interested in. So on error:
+			///errorInfo:any phrase that we like
 			console.log(errorInfo.toString());
-			this.emit('end');
+			this.emit('end'); //tell gulp that the styles task is completed
 		})
 		.pipe(gulp.dest('./app/temp/styles'));
 });

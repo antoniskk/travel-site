@@ -1,0 +1,26 @@
+.wrapper {
+	padding-left: 18px;
+	padding-right: 18px;
+	overflow: hidden; /* in row css file we had 12 blocks and we wanted a margin so we added padding right so we had overflow
+	we added a negative value so as to keep the 12 blocks size and then oveerflow to hide that added margin*/
+	max-width: 1236px;
+	margin-left: auto;
+	margin-right: auto;
+
+	&--medium {
+		max-width: 976px;
+	}
+
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--b-margin {
+		margin-bottom: 1rem;
+
+		@mixin atSmall {
+			margin-bottom: 3.875;
+		}
+	}
+}

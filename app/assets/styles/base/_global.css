@@ -7,3 +7,14 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+
+/*select every element*/
+* {
+	box-sizing: border-box;
+}
+
+
+a {
+	color: $mainOrange;
+}

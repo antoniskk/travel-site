@@ -1,0 +1,45 @@
+.row {
+
+	@mixin clearfix;
+
+	/* I wanted a padding between between the image and the text but I have added also a padding between the text and the right size 
+	so I deleted it. Check also wrapper css */
+	&--gutters {
+		margin-right: -65px;
+	}
+
+	/*select all the children that have div and add a padding right*/
+	&--gutters > div {
+		padding-right: 65px;
+	}
+
+	@__b-margin-until-medium {
+		margin-bottom:  1rem;
+	}
+
+
+	@mixin atMedium {
+
+		@__b-margin-until-medium {
+			margin-bottom: 0;
+		}
+	
+		&__medium-4 {
+			float: left;
+			width: 33.33%;
+		}
+
+		&__medium-4--larger {
+			width: 37%;
+		}
+
+		&__medium-8 {
+			float: left;
+			width: 66.66%;
+		}
+
+		&__medium-8--smaller {
+			width: 63%;
+		}
+	}
+}
